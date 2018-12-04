@@ -34,7 +34,7 @@ public class Main {
           }
         }
         line = reader.readLine();
-      }
+      }       // Collections class static method not instantiated(makes a collection out of the HashMap) makes comparing
       String key = Collections.max(cities.entrySet(), Map.Entry.comparingByValue()).getKey();
       System.out.println(key);
     } catch (Exception e) {

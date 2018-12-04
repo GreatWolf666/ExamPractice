@@ -30,14 +30,14 @@ public class Bookshelf {
   }
   public String mostPagesByAuthor(){
     HashMap<String, Integer> authors = new HashMap();
-//    fills hashmap with calculated page numbers
+//    fills hashmap with calculated page numbers, with comparing (in collections)
     for (Book book : books){
       if (authors.containsKey(book.getAuthor())){
         authors.replace(book.getAuthor(),authors.get(book.getAuthor())+ book.getPageNumber());
       }else{
         authors.put(book.getAuthor(), book.getPageNumber());
       }
-    }
+    }// Map has comparing by value, compares Map entries (by key or value)
   String author = Collections.max(authors.entrySet(), Map.Entry.comparingByValue()).getKey();
     return author;
   }
